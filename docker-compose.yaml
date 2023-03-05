@@ -1,0 +1,11 @@
+services:
+
+  nb:
+    build:
+      dockerfile: Dockerfile
+    volumes:
+      - .:/home/jovyan/work
+    ports:
+      - "10000:8888"
+    environment:
+      GRANT_SUDO: "yes"
